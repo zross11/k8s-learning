@@ -4,7 +4,7 @@ metadata:
   name: myapp-argo-application
   namespace: argocd
 spec:
-  project: k8s-learning
+  project: default
 
   source:
     repoURL: https://github.com/zross11/k8s-learning.git
