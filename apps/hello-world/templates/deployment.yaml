@@ -28,4 +28,4 @@ spec:
       volumes:
         - name: hello-world-content
           configMap:
-            name: hello-world-content
+            name: {{ include "hello-world.name" . }}
