@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "hello-world.name" . }}
+  labels:
+    app: {{ include "hello-world.name" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "hello-world.name" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "hello-world.name" . }}
+    spec:
+      containers:
+        - name: {{ include "hello-world.name" . }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: {{ .Values.service.port }}
+              protocol: TCP
+          volumeMounts:
+            - name: hello-world-content
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: hello-world-content
+          configMap:
+            name: hello-world-content
