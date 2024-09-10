@@ -1,0 +1,7 @@
+applications:
+  - name: hello-world
+    namespace: hello-world
+    chart:
+      repository: https://github.com/zross11/k8s-learning.git
+      name: hello-world
+      version: HEAD

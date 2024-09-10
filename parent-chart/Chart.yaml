@@ -1,0 +1,5 @@
+apiVersion: v2
+name: argocd-app-suites
+description: This chart dynamically creates argocd app suites for clusters.
+type: application
+version: 0.1.0
