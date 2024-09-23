@@ -123,7 +123,7 @@ func (r *WebAppReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctr
 					TargetPort: intstr.FromInt(8080),
 				},
 			},
-			Type: corev1.ServiceTypeLoadBalancer,
+			Type: corev1.ServiceTypeClusterIP,
 		},
 	}
 
