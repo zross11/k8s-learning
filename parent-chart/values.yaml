@@ -5,3 +5,9 @@ applications:
       repository: https://github.com/zross11/k8s-learning.git
       name: hello-world
       version: HEAD
+  - name: operator-test
+    namespace: operator-test-system
+    chart:
+      repository: https://github.com/zross11/k8s-learning.git
+      name: operator-test
+      version: HEAD

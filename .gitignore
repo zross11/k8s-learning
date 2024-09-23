@@ -1,1 +1,7 @@
 .env
+sunk-kind.yaml
+
+apps/hello-world/test-public-svc.yaml
+apps/hello-world/test-ing.yaml
+apps/hello-world/test-external-dns-with-lb.yaml
+shared-nvme-volume.yaml
