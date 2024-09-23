@@ -1,0 +1,10 @@
+apiVersion: webapp.example.com/v1
+kind: WebApp
+metadata:
+  name: my-webapp
+spec:
+  replicas: 3
+  image: zross55/helloworld-go:latest
+  # config:
+  #   setting1: value1
+  #   setting2: value2
